@@ -1,0 +1,45 @@
+<mvc:View
+    controllerName="exerciseone.controller.View_exercise_one"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Page id="page" title="{i18n>title}">
+    <content>
+            <l:SimpleForm
+                id="surveyForm"
+                editable="true"
+                layout="ResponsiveGridLayout"
+                labelSpanL="3"
+                labelSpanM="3"
+                emptySpanL="4"
+                emptySpanM="4"
+                columnsL="1"
+                columnsM="1">
+                
+                <Label id="lblName" text="Name"/>
+                <Input id="nameField"/>
+
+                <Label id="lblStreet" text="Street/No"/>
+                <Input id="streetField"/>
+
+                <Label id="lblZip" text="ZIP Code/City"/>
+                <Input id="zipField"/>
+
+                <Label id="lblCountry" text="Country"/>
+                <Select id="countrySelect">
+                    <core:Item id="itmEngland" key="EN" text="England"/>
+                    <core:Item id="itmGermany" key="DE" text="Germany"/>
+                    <core:Item id="itmUSA" key="US" text="USA"/>
+                    <core:Item id="itmPhilippines" key="PH" text="Philippines"/>
+                </Select>
+
+                <HBox id="hboxButtons" justifyContent="End" class="sapUiSmallMarginTop">
+                    <Button id="btnSave" text="Save" type="Accept" press=".onSavePress"/>
+                    <Button id="btnClear" text="Clear" type="Reject" press=".onClearPress" class="sapUiTinyMarginBegin"/>
+                </HBox>
+
+            </l:SimpleForm>
+        </content>
+    </Page>
+</mvc:View>
